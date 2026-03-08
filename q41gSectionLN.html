@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+    <title> Avery Ababon Q4 graded exercise 1</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+        body{
+            font-family: "VT323", monospace;
+            background-image: url('https://i.pinimg.com/736x/aa/50/00/aa50003ef359380c000817908d741382.jpg');
+            background-size: 100%;
+            padding: 15px;
+            font-size: 20px;
+            color: rgb(102, 89, 85);
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+            color: #74675c;
+            font-size: 23px;
+            text-shadow: 0 0 7px #ffffff;
+        }
+
+        * {
+            cursor: url('https://cdn.cursors-4u.net/css-previews/blinking-hello-kitty-angel-c592abfe-css.webp') 0 0, auto !important;
+        }
+
+        .star-rating { direction: rtl; display: inline-block; }
+        .star-rating input { display: none; }
+        .star-rating label { font-size: 30px; color: #ddd; cursor: pointer; }
+        .star-rating input:checked ~ label { color: #ffe5a4; }.star-rating label:hover,
+        .star-rating label:hover ~ label { color: #ffe5a4; text-shadow: 0 0 3px #ffffff;}
+        
+        input{
+            width: 500px;
+            font-family: "VT323", monospace;
+            color: rgb(102, 89, 85);
+            height: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+
+
+        .top{
+            width: 500px;
+            height: 1px;
+            background-image: linear-gradient(#ffe0ef, #FFF5FC);
+            margin: auto;
+            padding: 15px;
+            text-shadow: 0 0 7px #ff9acd;
+            border: 1px solid rgb(138, 118, 107);
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            border-bottom: 0;
+            color: white;
+            text-align: right;
+        }
+
+        .genre{
+            width: 500px;
+            text-align: center;
+            font-family: "VT323", monospace;
+            color: rgb(102, 89, 85);
+        }
+
+        .thingy{
+            width: 500px;
+            margin: auto;
+            padding-top: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 15px;
+            color: rgb(138, 118, 107);
+            background-color: rgb(255, 251, 253);
+            border: 1px solid rgb(138, 118, 107);
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        button{
+            background-color: rgb(255, 245, 252);
+            color:rgb(138, 118, 107);
+            font-family: "VT323", monospace;
+            font-size: 17px;
+            width: 490px;
+            padding: 5px;
+            margin: 5px;
+            border: 1px solid #74675c;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top"></div>
+    <div class="thingy">
+    <h2>Movie Rating:</h2>
+    <form action="/submit" method="post" class="raitings">
+
+        <label for="title">Title:</label>
+        <br>
+        <input type="text" id="title" name="title" required>
+        <br>
+
+        <label for="year">Year</label>
+        <br>
+        <input type="number" id="year" name="year" required>
+        <br>
+
+        <label for="genre">Genre</label>
+        <br>
+        <select name="genres" id="genre" class="genre">
+            <option value="horror">Horror</option>
+            <option value="romance">Romance</option>
+            <option value="comedy">Comedy</option>
+        </select>
+        <br>
+
+        <label>Rating:</label><br>
+        <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5">★</label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4">★</label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3">★</label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2">★</label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1">★</label>
+        </div>
+        <br>
+
+        <button type="submit">Add Movie</button>
+
+    </form>
+    </div>
+</body>
