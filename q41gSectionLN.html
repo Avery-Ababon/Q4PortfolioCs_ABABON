@@ -147,7 +147,6 @@ const movieList = document.getElementById("movieList");
 
 form.addEventListener("submit", function(e){
     e.preventDefault();
-
     const title = document.getElementById("title").value;
     const year = document.getElementById("year").value;
     const genre = document.getElementById("genre").value;
@@ -164,24 +163,31 @@ form.addEventListener("submit", function(e){
     movies.push(movie);
     localStorage.setItem("movies", JSON.stringify(movies));
     displayMovies();
+    form.reset();
 });
 
 function displayMovies(){
-
     movieList.innerHTML = "";
-
     const movies = JSON.parse(localStorage.getItem("movies")) || [];
-
-    movies.forEach(movie => {
-
+    movies.forEach((movie, index) => {
         let stars = "★".repeat(movie.rating);
+
         movieList.innerHTML += `
         <div style="border:1px solid #ccc; padding:15px; margin:10px; border-radius:8px;">
         ${movie.title} (${movie.year}) - ${movie.genre}, Rating: 
         <span style="color:gold">${stars}</span>
+
+        <button onclick="deleteMovie(${index})" style="width:80px; margin-left:10px;">Delete</button>
         </div>
         `;
     });
+}
+
+function deleteMovie(index){
+    let movies = JSON.parse(localStorage.getItem("movies")) || [];
+    movies.splice(index, 1);
+    localStorage.setItem("movies", JSON.stringify(movies));
+    displayMovies();
 }
 displayMovies();
 
