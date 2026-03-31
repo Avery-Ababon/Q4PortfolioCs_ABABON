@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Sir Roy/Al Mendoza">
+  <meta name="description" content="testing and debugging">
+  <meta name="keywords" content="testing and debugging">
+  <title>CS3 </title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <style>
+    tr:nth-child(1) ~ tr:nth-child(odd) {
+      background-color: lightgray;
+      color: black;
+    }
+    td, th {
+      padding: 10px;
+    }
+    table {
+      width: 90%;
+      margin: 0 auto;
+    }
+    caption {
+      font-size: 2em;
+      font-weight: bold;
+      padding: 10px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="index.html#start">Table</a>
+      <a href="index.html#input">Input</a>
+      <a href="index.html#output">Output</a>
+    </nav>
+    
+    <h1 style="padding: 30px">Allison Ababon / Cesium Mar 2026 </h1>
+  </header>
+
+  <section id="table">
+    <table> 
+      <caption> Error Logs - place errors found in the table below</caption>
+      <tr class="rColor">
+        <th> item# </th> 
+        <th> code line#<br/>CSS or JS </th> 
+        <th> Description</th>
+        <th> Correction Done</th>
+      </tr>
+      <tr>
+        <td> 1 </td> 
+        <td> #25 JS </td> 
+        <td> Missing a closing bracket for the function </td>
+        <td> Added a closing bracket on line #26 </td>
+      </tr>
+      <tr>
+        <td> 2 </td> 
+        <td> #1 JS </td> 
+        <td> The function plotPoint is called with 4 arguments in HTML but defined with 0 in JS. </td>
+        <td> Changed to function plotPoint(x0, y0, x, y) </td>
+      </tr>
+      <tr>
+        <td> 3 </td> 
+        <td> #6 JS </td> 
+        <td> Incorrect property syntax: styleleft isn't a valid JS property. </td>
+        <td> Changed to point.style.left </td>
+      </tr>
+      <tr>
+        <td> 4 </td> 
+        <td> #7 JS </td> 
+        <td> Incorrect property syntax: stylebottom isn't a valid JS property. </td>
+        <td> Changed to point.style.bottom </td>
+      </tr>
+      <tr>
+        <td> 5 </td> 
+        <td> #29 CSS </td> 
+        <td> Navigation links are stacking vertically instead of staying on one line. </td>
+        <td> Added display: inline-block; to nav a (or used flexbox). </td>
+      </tr>
+      <tr>
+        <td> 6 </td> 
+        <td> #24 CSS </td> 
+        <td> Navigation is supposed to stay at the top while scrolling. </td>
+        <td> Added position: fixed; top: 0; z-index: 1000; to nav. </td>
+      </tr>
+      <tr>
+        <td> 7 </td> 
+        <td> #40 CSS </td> 
+        <td> The nav a :hover selector has a space, targeting children instead of the link itself. </td>
+        <td> Removed the space: nav a:hover. </td>
+      </tr>
+      <tr>
+        <td> 8 </td> 
+        <td> #51 CSS </td> 
+        <td> The red point won't move because its position isn't defined. </td>
+        <td> Added position: absolute; to the .point class. </td>
+      </tr>
+      <tr>
+        <td> 9 </td> 
+        <td> #115 CSS </td> 
+        <td> There is an extra closing brace } at the end of the CSS file. </td>
+        <td> Removed the trailing }. </td>
+      </tr>
+      <tr>
+        <td> 10 </td> 
+        <td> #20 JS </td> 
+        <td> The final } is an extra closing bracket (syntax error). </td>
+        <td> Removed the extra } at the very end of the file. </td>
+      </tr>
+     
+    </table>
+    <hr>
+  </section>
+  
+   
+  <!--- anchors for socmed site are done with image sprites -->
+  <footer>
+    <a href="https://facebook.com"> 
+    <div class="icon facebook"></div>
+    </a>
+    <a href="https://twitter.com">
+    <div class="icon twitter"></div>
+    </a>
+    <a href="https://github.com">
+    <div class="icon github"></div>
+    </a>
+  </footer>
+ 
+</body>
+
+</html>
